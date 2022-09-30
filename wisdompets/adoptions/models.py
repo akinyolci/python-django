@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from random import choices
 from tokenize import blank_re
 from unittest.util import _MAX_LENGTH
@@ -8,17 +7,17 @@ from django.db import models
 
 class Pet(models.Model):
     SEX_CHOICES = [('M','Male'),('F','Female')]
-    name = models.CharField(_MAX_LENGTH = 100)
-    submitter = models.CharField(_MAX_LENGTH = 100)
-    species = models.CharField(_MAX_LENGTH = 30)
-    breed = models.CharField(_MAX_LENGTH = 30, blank_re = True)
+    name = models.CharField(max_length = 100)
+    submitter = models.CharField(max_length = 100)
+    species = models.CharField(max_length = 30)
+    breed = models.CharField(max_length = 30, blank = True)
     description = models.TextField()
-    sex = models.CharField(_MAX_LENGTH = 1 , choices = SEX_CHOICES , blank_re= True)
+    sex = models.CharField(max_length = 1 , choices = SEX_CHOICES , blank= True)
     submission_date = models.DateTimeField()
-    age = models.IntegerField(NULL = True)
-    vaccinations = models.ManyToManyField('Vaccine', blank_re=True)
+    age = models.IntegerField(null = True)
+    vaccinations = models.ManyToManyField('Vaccine', blank=True)
 
 
 class Vaccine(models.Model):
-    name = models.CharField(_MAX_LENGTH = 50)
+    name = models.CharField(max_length = 50)
 
