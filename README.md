@@ -21,4 +21,11 @@ for setup;
 - cd wisdompets/
 -ls
 -python manage.py make migrations
--
+-ls adoptions/migrations
+-python manage.py showmigrations
+-python manage.py migrate     for apply migrations
+-python manage.py showmigrations 
+---------------
+
+--Now install the Sqlite DB from sqlitebrowser.org
+
