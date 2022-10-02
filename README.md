@@ -34,3 +34,14 @@ for setup;
 - python manage.py load_pet_data
 
 
+
+-cd wisdompets
+- python manage.py createsuperuser
+Username (leave blank to use 'codespace'): 
+Email address: 
+Password: 
+Password (again): 
+Superuser created successfully.
+
+-python manage.py runserver
+
