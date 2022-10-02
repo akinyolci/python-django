@@ -29,3 +29,8 @@ for setup;
 
 --Now install the Sqlite DB from sqlitebrowser.org
 
+- cd wisdompets
+-ls
+- python manage.py load_pet_data
+
+
